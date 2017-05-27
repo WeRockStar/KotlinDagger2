@@ -9,6 +9,7 @@ import javax.inject.Singleton
 /**
  * Created by werockstar on 5/28/2017 AD.
  */
+
 @Module
 class ApplicationModule(var application: Application) {
 
