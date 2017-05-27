@@ -1,5 +1,5 @@
 # KotlinDagger2 
-
+[![Build Status](https://travis-ci.org/WeRockStar/KotlinDagger2.svg?branch=master)](https://travis-ci.org/WeRockStar/KotlinDagger2)
 A simple build android app with `Kotlin` office language for android.
 
 ## Libraries
