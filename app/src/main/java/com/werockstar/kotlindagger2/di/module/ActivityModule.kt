@@ -2,6 +2,7 @@ package com.werockstar.kotlindagger2.di.module
 
 import android.app.Activity
 import com.werockstar.kotlindagger2.di.ActivityContext
+import com.werockstar.kotlindagger2.di.ActivityScope
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -14,7 +15,7 @@ import javax.inject.Singleton
 class ActivityModule(var activity: Activity) {
 
     @Provides
-    @Singleton
+    @ActivityScope
     @ActivityContext
     fun provideActivity(): Activity = activity
 }
