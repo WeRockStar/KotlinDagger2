@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android'
 apply plugin: 'jacoco-android'
-
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
@@ -29,12 +28,10 @@ android {
     }
 
     compileOptions {
-        targetCompatibility 1.8
-        sourceCompatibility 1.8
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
     }
 }
-
-
 ext {
     supportLibrary = "25.3.1"
     retrofit = "2.2.0"
@@ -46,33 +43,34 @@ ext {
     robolectric = '3.3.2'
     espresso = '2.2.2'
 }
-
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    compile "com.android.support:appcompat-v7:$supportLibrary"
-    compile "com.android.support:design:$supportLibrary"
-    compile "com.android.support:recyclerview-v7:$supportLibrary"
-    compile "com.android.support:cardview-v7:$supportLibrary"
-
-    testCompile 'junit:junit:4.12'
-    testCompile "org.mockito:mockito-core:$mockito"
-    testCompile "org.robolectric:robolectric:$robolectric"
-    androidTestCompile ("com.android.support.test.espresso:espresso-core:$espresso") {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "com.android.support:appcompat-v7:$supportLibrary"
+    implementation "com.android.support:design:$supportLibrary"
+    implementation "com.android.support:recyclerview-v7:$supportLibrary"
+    implementation "com.android.support:cardview-v7:$supportLibrary"
+    testImplementation 'junit:junit:4.12'
+    testImplementation "org.mockito:mockito-core:$mockito"
+    testImplementation "org.robolectric:robolectric:$robolectric"
+    androidTestImplementation("com.android.support.test.espresso:espresso-core:$espresso") {
         exclude group: 'com.android.support', module: 'support-annotations'
     }
-
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile "com.squareup.retrofit2:retrofit:$retrofit"
-    compile "com.squareup.retrofit2:converter-gson:$retrofit"
-    compile "com.squareup.retrofit2:adapter-rxjava2:$retrofit"
-    compile "com.squareup.okhttp3:logging-interceptor:$okHttp"
-    compile "com.squareup.okhttp3:okhttp:$okHttp"
-    compile "com.google.dagger:dagger:$dagger"
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation "com.squareup.retrofit2:retrofit:$retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okHttp"
+    implementation "com.squareup.okhttp3:okhttp:$okHttp"
+    implementation "com.google.dagger:dagger:$dagger"
     kapt "com.google.dagger:dagger-compiler:$dagger"
-    compile "io.reactivex.rxjava2:rxjava:$rxJava"
-    compile "io.reactivex.rxjava2:rxandroid:$rxAndroid"
+    implementation "io.reactivex.rxjava2:rxjava:$rxJava"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroid"
+}
+
+repositories {
+    maven { url 'https://maven.google.com' }
 }
