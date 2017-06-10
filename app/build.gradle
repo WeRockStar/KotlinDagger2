@@ -33,7 +33,7 @@ android {
     }
 }
 ext {
-    supportLibrary = "25.3.1"
+    supportLibrary = "25.4.0"
     retrofit = "2.2.0"
     dagger = '2.11'
     okHttp = "3.7.0"
