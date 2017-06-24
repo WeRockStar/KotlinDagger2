@@ -5,4 +5,5 @@ import javax.inject.Scope
 /**
  * Created by werockstar on 6/2/2017 AD.
  */
-@Scope annotation class ActivityScope
+@Scope
+annotation class ActivityScope

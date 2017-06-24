@@ -69,6 +69,7 @@ dependencies {
     kapt "com.google.dagger:dagger-compiler:$dagger"
     implementation "io.reactivex.rxjava2:rxjava:$rxJava"
     implementation "io.reactivex.rxjava2:rxandroid:$rxAndroid"
+    implementation 'com.android.support:support-v4:25.4.0'
 }
 
 repositories {
