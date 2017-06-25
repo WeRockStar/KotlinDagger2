@@ -3,6 +3,7 @@ package com.werockstar.kotlindagger2.di.component
 import com.werockstar.kotlindagger2.view.activity.MainActivity
 import com.werockstar.kotlindagger2.di.module.ApplicationModule
 import com.werockstar.kotlindagger2.di.module.HttpModule
+import com.werockstar.kotlindagger2.view.fragment.MainFragment
 import dagger.Component
 import javax.inject.Singleton
 
@@ -15,4 +16,5 @@ import javax.inject.Singleton
 interface ApplicationComponent {
 
     fun inject(activity: MainActivity)
+    fun inject(fragment: MainFragment)
 }

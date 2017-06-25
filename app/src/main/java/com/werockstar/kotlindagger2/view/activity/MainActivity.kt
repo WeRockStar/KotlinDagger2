@@ -6,6 +6,7 @@ import com.werockstar.kotlindagger2.R
 import com.werockstar.kotlindagger2.di.component.ActivityComponent
 import com.werockstar.kotlindagger2.di.component.DaggerActivityComponent
 import com.werockstar.kotlindagger2.di.module.ActivityModule
+import com.werockstar.kotlindagger2.view.fragment.MainFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,6 +19,14 @@ class MainActivity : AppCompatActivity() {
         activityComponent = DaggerActivityComponent.builder()
                 .activityModule(ActivityModule(this))
                 .build()
+
+        initFragment()
+    }
+
+    private fun initFragment() {
+        supportFragmentManager.beginTransaction()
+                .replace(R.id.container, MainFragment())
+                .commit()
     }
 
     fun component(): ActivityComponent = activityComponent
