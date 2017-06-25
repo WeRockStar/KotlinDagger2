@@ -1,6 +1,7 @@
 package com.werockstar.kotlindagger2.di.component
 
 import com.werockstar.kotlindagger2.di.module.ActivityModule
+import com.werockstar.kotlindagger2.view.fragment.MainFragment
 import dagger.Component
 import javax.inject.Singleton
 
@@ -9,4 +10,6 @@ import javax.inject.Singleton
  */
 @Singleton
 @Component(modules = arrayOf(ActivityModule::class))
-interface ActivityComponent
+interface ActivityComponent {
+    fun inject(fragment: MainFragment)
+}
