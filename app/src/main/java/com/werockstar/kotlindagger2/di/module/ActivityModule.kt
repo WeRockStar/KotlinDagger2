@@ -12,7 +12,7 @@ import javax.inject.Singleton
  */
 
 @Module
-class ActivityModule(var activity: Activity) {
+class ActivityModule(val activity: Activity) {
 
     @Provides
     @ActivityScope
