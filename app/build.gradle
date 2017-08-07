@@ -40,7 +40,7 @@ ext {
     dagger = '2.11'
     okHttp = "3.7.0"
     mockito = '1.10.19'
-    rxJava = '2.1.0'
+    rxJava = '2.1.2'
     rxAndroid = '2.0.1'
     robolectric = '3.3.2'
     espresso = '2.2.2'
