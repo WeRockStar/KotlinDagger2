@@ -10,7 +10,7 @@ import com.werockstar.kotlindagger2.view.fragment.MainFragment
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var activityComponent: ActivityComponent
+    private lateinit var activityComponent: ActivityComponent
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,5 +29,5 @@ class MainActivity : AppCompatActivity() {
                 .commit()
     }
 
-    fun component(): ActivityComponent = activityComponent
+    private fun component(): ActivityComponent = activityComponent
 }

@@ -5,10 +5,6 @@ import com.werockstar.kotlindagger2.di.component.ApplicationComponent
 import com.werockstar.kotlindagger2.di.component.DaggerApplicationComponent
 import com.werockstar.kotlindagger2.di.module.ApplicationModule
 
-/**
- * Created by werockstar on 6/1/2017 AD.
- */
-
 class App : Application() {
 
     override fun onCreate() {
