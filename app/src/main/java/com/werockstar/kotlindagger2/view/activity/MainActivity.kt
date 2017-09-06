@@ -29,5 +29,5 @@ class MainActivity : AppCompatActivity() {
                 .commit()
     }
 
-    private fun component(): ActivityComponent = activityComponent
+    fun component(): ActivityComponent = activityComponent
 }
