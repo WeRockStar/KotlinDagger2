@@ -1,8 +1,13 @@
 package com.werockstar.kotlindagger2.extension
 
-import org.junit.Assert.*
+import android.support.v4.app.Fragment
+import org.junit.Assert.assertEquals
+import org.junit.Test
 
-/**
- * Created by werockstar on 10/21/2017 AD.
- */
-class FragmentExTest
+class FragmentExTest {
+
+    @Test
+    fun convert_class_to_string_class_simple_name() {
+        assertEquals("Fragment", Fragment().toClassName())
+    }
+}

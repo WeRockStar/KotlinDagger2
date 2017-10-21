@@ -1,5 +1,5 @@
 package com.werockstar.kotlindagger2.extension
 
-/**
- * Created by werockstar on 10/21/2017 AD.
- */
+import android.support.v4.app.Fragment
+
+fun Fragment.toClassName() = this::class.java.simpleName

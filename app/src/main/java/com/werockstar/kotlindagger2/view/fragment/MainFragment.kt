@@ -9,10 +9,13 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.werockstar.kotlindagger2.R
+import com.werockstar.kotlindagger2.extension.toClassName
 import com.werockstar.kotlindagger2.view.activity.MainActivity
 
 
 class MainFragment : Fragment() {
+
+    private val TAG = MainFragment().toClassName()
 
     override fun onAttach(context: Context?) {
         super.onAttach(context)
