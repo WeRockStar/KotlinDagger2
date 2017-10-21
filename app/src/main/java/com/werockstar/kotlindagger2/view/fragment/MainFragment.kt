@@ -27,6 +27,5 @@ class MainFragment : Fragment() {
         return view
     }
 
-    fun getMainActivity(): MainActivity = activity as MainActivity
-
+    private fun getMainActivity(): MainActivity = activity as MainActivity
 }

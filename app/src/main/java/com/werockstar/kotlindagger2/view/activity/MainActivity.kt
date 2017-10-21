@@ -1,6 +1,7 @@
 package com.werockstar.kotlindagger2.view.activity
 
 import android.os.Bundle
+import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import com.werockstar.kotlindagger2.R
 import com.werockstar.kotlindagger2.di.component.ActivityComponent
@@ -20,12 +21,12 @@ class MainActivity : AppCompatActivity() {
                 .activityModule(ActivityModule(this))
                 .build()
 
-        initFragment()
+        initFragment(MainFragment())
     }
 
-    private fun initFragment() {
+    private fun initFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
-                .replace(R.id.container, MainFragment())
+                .replace(R.id.container, fragment)
                 .commit()
     }
 
