@@ -27,7 +27,7 @@ android:
   - sys-img-${ANDROID_ABI}-${ANDROID_TARGET}
 
 script:
-  - ./gradlew build assembleAndroidTest jacocoTestReport
+  - ./gradlew build assembleAndroidTest jacocoTestReportDebug
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 
