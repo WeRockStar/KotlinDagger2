@@ -17,15 +17,14 @@ class HttpModule {
 
     @Provides
     @Singleton
-    fun provideOkHttp(): OkHttpClient {
-        val logging = HttpLoggingInterceptor()
-        return OkHttpClient.Builder()
-                .addInterceptor(logging.setLevel(HttpLoggingInterceptor.Level.BODY))
-                .readTimeout(30, TimeUnit.SECONDS)
-                .build()
-    }
+    fun provideOkHttp() = OkHttpClient.Builder()
+            .addInterceptor(HttpLoggingInterceptor()
+                    .setLevel(HttpLoggingInterceptor.Level.BODY))
+            .readTimeout(30, TimeUnit.SECONDS)
+            .build()
 
     @Provides
     @Singleton
-    fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit = Retrofit.Builder().client(okHttpClient).build()
+    fun provideRetrofit(okHttpClient: OkHttpClient)
+            = Retrofit.Builder().client(okHttpClient).build()
 }
