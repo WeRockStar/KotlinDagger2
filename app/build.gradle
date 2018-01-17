@@ -4,12 +4,12 @@ apply plugin: 'kotlin-android'
 apply plugin: 'com.vanniktech.android.junit.jacoco'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion '26.0.2'
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "com.werockstar.kotlindagger2"
         minSdkVersion 15
-        targetSdkVersion 26
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -35,7 +35,7 @@ android {
 
 }
 ext {
-    supportLibrary = "26.1.0"
+    supportLibrary = "27.0.2"
     retrofit = "2.2.0"
     dagger = '2.11'
     okHttp = "3.7.0"
