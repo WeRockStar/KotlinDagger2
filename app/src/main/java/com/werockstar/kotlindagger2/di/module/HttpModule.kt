@@ -17,7 +17,7 @@ class HttpModule {
 
     @Provides
     @Singleton
-    fun provideOkHttp() = OkHttpClient.Builder()
+    fun provideOkHttp(): OkHttpClient = OkHttpClient.Builder()
             .addInterceptor(HttpLoggingInterceptor()
                     .setLevel(HttpLoggingInterceptor.Level.BODY))
             .readTimeout(30, TimeUnit.SECONDS)
@@ -25,6 +25,6 @@ class HttpModule {
 
     @Provides
     @Singleton
-    fun provideRetrofit(okHttpClient: OkHttpClient)
+    fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit
             = Retrofit.Builder().client(okHttpClient).build()
 }

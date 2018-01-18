@@ -11,7 +11,7 @@ import javax.inject.Singleton
  */
 
 @Module
-class ApplicationModule(var application: Application) {
+class ApplicationModule(private val application: Application) {
 
     @Provides
     @Singleton
