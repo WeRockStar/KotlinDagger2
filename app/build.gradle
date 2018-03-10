@@ -35,13 +35,13 @@ android {
 
 }
 ext {
-    supportLibrary = "27.0.2"
+    supportLibrary = "27.1.0"
     retrofit = "2.2.0"
     dagger = '2.11'
     okHttp = "3.7.0"
     mockito = '1.10.19'
     rxJava = '2.1.2'
-    rxAndroid = '2.0.1'
+    rxAndroid = '2.0.2'
     robolectric = '3.3.2'
     espresso = '3.0.1'
 }
