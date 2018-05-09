@@ -37,7 +37,7 @@ android {
 ext {
     supportLibrary = "27.1.1"
     retrofit = "2.2.0"
-    dagger = '2.11'
+    dagger = '2.12'
     okHttp = "3.7.0"
     mockito = '1.10.19'
     rxJava = '2.1.2'
