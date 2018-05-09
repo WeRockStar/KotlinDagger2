@@ -1,8 +1,8 @@
 package com.werockstar.kotlindagger2.view.activity
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.werockstar.kotlindagger2.R
 import com.werockstar.kotlindagger2.di.component.ActivityComponent
 import com.werockstar.kotlindagger2.di.component.DaggerActivityComponent
