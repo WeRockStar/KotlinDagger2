@@ -8,6 +8,6 @@ class FragmentExTest {
 
     @Test
     fun convert_class_to_string_class_simple_name() {
-        assertEquals("Fragment", androidx.fragment.app.Fragment().toClassName())
+        assertEquals("Fragment", Fragment().toClassName())
     }
 }
